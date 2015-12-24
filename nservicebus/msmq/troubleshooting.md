@@ -55,6 +55,25 @@ WARNING: On production servers uninstalling MSMQ will delete all queues and mess
 
 You can find more details about this exception in [this blog post](http://blogs.msdn.com/b/johnbreakwell/archive/2006/09/18/insufficient-resources-run-away-run-away.aspx).
 
+### Alternative reasons for Insufficient resources 
+
+There can other reasons for this exception from occuring:
+
+1. The thread pool for the remote read is exhausted (MSMQ 2.0 only).
+1. The number of local callback threads is exceeded
+1. The volume of messages has exceeded what the system can handle (MSMQ 2.0  only).
+1. Paged-pool kernel memory is exhausted.
+1. Mismatched binaries.
+1. The message size is too large.
+1. The machine quota has been exceeded.
+1. Routing problems when opening a transactional foreign queue (MSMQ 3.0 only)
+1. Lack of disk space.
+1. Storage problems on mobile devices
+1. Clustering too many MSMQ resources
+
+Read the information provided by the following exhaustive blog post to resolve potential other issues:
+
+- http://blogs.msdn.com/b/johnbreakwell/archive/2006/09/18/761035.aspx
 
 ## Virtual Private Networks (VPN)
 
