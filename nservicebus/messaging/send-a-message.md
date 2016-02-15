@@ -6,7 +6,7 @@ redirects:
 - nservicebus/how-do-i-send-a-message
 ---
 
-NServiceBus supports sending different types of messages (see [Messages, Events and Commands](messages-events-commands.md)) to any endpoint. Messages can be sent from outside or inside the message processing pipeline:
+NServiceBus supports sending different types of messages (see [Messages, Events and Commands](messages-events-commands.md)) to any endpoint. When a message arrives at an endpoint it goes through a pipeline of processing steps. Messages can be sent from outside or inside the message processing pipeline:
 
 ## Outside the pipeline
 
