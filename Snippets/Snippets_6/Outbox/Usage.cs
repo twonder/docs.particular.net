@@ -1,4 +1,4 @@
-﻿namespace Snippets5.Outbox
+﻿namespace Snippets6.Outbox
 {
     using NServiceBus;
 
@@ -8,9 +8,9 @@
         {
             #region OutboxEnablineInCode
 
-            BusConfiguration busConfiguration = new BusConfiguration();
+            EndpointConfiguration configuration = new EndpointConfiguration();
 
-            busConfiguration.EnableOutbox();
+            configuration.EnableOutbox();
 
             #endregion
         }

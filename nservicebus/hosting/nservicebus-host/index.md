@@ -20,7 +20,7 @@ To use the host just create a new C# class library and reference the [NServiceBu
 
 ## Configuring your endpoint
 
-The `NServiceBus.Host.exe` scans the runtime directory for assemblies containing a class that implements the `IConfigureThisEndpoint` interface. This class will contain the configuration for this endpoint. You can read more on how NServiceBus does assembly scanning [here](/nservicebus/hosting/assembly-scanning.md)
+The `NServiceBus.Host.exe` scans the runtime directory for assemblies containing a class that implements the `IConfigureThisEndpoint` interface. This class will contain the configuration for this endpoint. You can read more on how NServiceBus does [assembly scanning](/nservicebus/hosting/assembly-scanning.md).
 
 If you want to avoid the scanning process you can explicitly configure the type of your endpoint configuration by adding the following to the `NServiceBus.Host.exe.config` file. The below example show the exact syntax:
 
@@ -31,7 +31,7 @@ snippet:ExplicitHostConfigType
 
 The `NServiceBus.Host.exe` creates a separate *service* [Application Domain](https://msdn.microsoft.com/en-us/library/2bh4z9hs.aspx) to run NServiceBus and the user code. The new domain is assigned a configuration file named after the dll that contains the class implementing `IConfigureThisEndpoint`. All the configuration should be done in that file (as opposed to `NServiceBus.Host.exe.config`). In most cases that means just adding the `app.config` file to the project and letting MSBuild take care of renaming it while moving to the `bin` folder.
 
-NOTE: When the endpoint configuration is not specified explicitly, the host scans all the assemblies to find it and it does so in the context of the *host* application domain, not the new *service* domain. Because of that, when [reditecting assembly versions](https://msdn.microsoft.com/en-us/library/7wd6ex19.aspx), the `assemblyBinding` element needs to be present in both `NServiceBus.Host.exe.config` and `app.config`.
+NOTE: When the endpoint configuration is not specified explicitly, the host scans all the assemblies to find it and it does so in the context of the *host* application domain, not the new *service* domain. Because of that, when [redirecting assembly versions](https://msdn.microsoft.com/en-us/library/7wd6ex19.aspx), the `assemblyBinding` element needs to be present in both `NServiceBus.Host.exe.config` and `app.config`.
 
 
 ## Custom initialization and startup
@@ -60,7 +60,7 @@ Defer all startup behavior until all initialization has been completed. At this 
 
 ## Logging
 
-As of NServiceBus Version 5 logging for the host is controlled with the same API as the core. This is documented [here](/nservicebus/logging/).
+As of NServiceBus Version 5 [logging](/nservicebus/logging/) for the host is controlled with the same API as the core.
 
 You can add the logging API calls as mentioned in the above article directly in your implementation of `IConfigureThisEndoint.Customize` method.
 

@@ -84,38 +84,60 @@
       <HintPath>..\..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.ChildKernel, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.Extensions.ChildKernel.3.2.0.0\lib\net45-full\Ninject.Extensions.ChildKernel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.ContextPreservation, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.Extensions.ContextPreservation.3.2.0.0\lib\net45-full\Ninject.Extensions.ContextPreservation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.NamedScope, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ninject.Extensions.NamedScope.3.2.0.0\lib\net45-full\Ninject.Extensions.NamedScope.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NLog">
       <HintPath>..\..\packages\NLog.4.2.3\lib\net45\NLog.dll</HintPath>
     </Reference>
-    <Reference Include="NServiceBus.Callbacks, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NServiceBus.Callbacks.1.0.0-unstable0028\lib\net452\NServiceBus.Callbacks.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="NServiceBus.Callbacks">
+      <HintPath>..\..\packages\NServiceBus.Callbacks.1.0.0-unstable0030\lib\net452\NServiceBus.Callbacks.dll</HintPath>
     </Reference>
     <Reference Include="NServiceBus.CommonLogging, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NServiceBus.CommonLogging.2.2.0-unstable0007\lib\net452\NServiceBus.CommonLogging.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NServiceBus.Core">
-      <HintPath>..\..\packages\NServiceBus.6.0.0-unstable1448\lib\net452\NServiceBus.Core.dll</HintPath>
+      <HintPath>..\..\packages\NServiceBus.6.0.0-unstable1543\lib\net452\NServiceBus.Core.dll</HintPath>
     </Reference>
-    <Reference Include="NServiceBus.Gateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NServiceBus.Gateway.1.1.0-unstable0045\lib\net452\NServiceBus.Gateway.dll</HintPath>
+    <Reference Include="NServiceBus.Gateway, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NServiceBus.Gateway.2.0.0-unstable0067\lib\net452\NServiceBus.Gateway.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NServiceBus.Host, Version=7.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NServiceBus.Host.7.0.0-unstable0053\lib\net452\NServiceBus.Host.exe</HintPath>
-      <Private>True</Private>
+    <Reference Include="NServiceBus.Host">
+      <HintPath>..\..\packages\NServiceBus.Host.7.0.0-unstable0057\lib\net452\NServiceBus.Host.exe</HintPath>
     </Reference>
     <Reference Include="NServiceBus.Log4Net, Version=1.1.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NServiceBus.Log4Net.1.1.0-unstable0016\lib\net452\NServiceBus.Log4Net.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NServiceBus.Newtonsoft.Json, Version=0.3.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NServiceBus.Newtonsoft.Json.0.3.0-unstable0008\lib\net452\NServiceBus.Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NServiceBus.NHibernate, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NServiceBus.NHibernate.6.3.0-unstable0036\lib\net452\NServiceBus.NHibernate.dll</HintPath>
+      <HintPath>..\..\packages\NServiceBus.NHibernate.6.3.0-unstable0055\lib\net452\NServiceBus.NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NServiceBus.NLog, Version=1.2.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
@@ -130,6 +152,10 @@
       <HintPath>..\..\packages\NServiceBus.CastleWindsor.5.1.0-unstable0000\lib\net451\NServiceBus.ObjectBuilder.CastleWindsor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NServiceBus.ObjectBuilder.Ninject, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NServiceBus.Ninject.5.2.0-unstable0005\lib\net45\NServiceBus.ObjectBuilder.Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NServiceBus.ObjectBuilder.Spring, Version=7.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NServiceBus.Spring.7.0.0-unstable0011\lib\net452\NServiceBus.ObjectBuilder.Spring.dll</HintPath>
       <Private>True</Private>
@@ -142,17 +168,15 @@
       <HintPath>..\..\packages\NServiceBus.Unity.6.3.0-unstable0015\lib\net452\NServiceBus.ObjectBuilder.Unity.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NServiceBus.RavenDB, Version=4.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NServiceBus.RavenDB.4.0.0-unstable0052\lib\net452\NServiceBus.RavenDB.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="NServiceBus.RavenDB">
+      <HintPath>..\..\packages\NServiceBus.RavenDB.4.0.0-unstable0088\lib\net452\NServiceBus.RavenDB.dll</HintPath>
     </Reference>
     <Reference Include="NServiceBus.Transports.RabbitMQ, Version=4.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NServiceBus.RabbitMQ.4.0.0-pullrequest0124\lib\net452\NServiceBus.Transports.RabbitMQ.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NServiceBus.Transports.SQLServer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NServiceBus.SqlServer.3.0.0-unstable0081\lib\net452\NServiceBus.Transports.SQLServer.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="NServiceBus.Transports.SQLServer">
+      <HintPath>..\..\packages\NServiceBus.SqlServer.3.0.0-unstable0093\lib\net452\NServiceBus.Transports.SQLServer.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
@@ -161,13 +185,11 @@
       <HintPath>..\..\packages\RabbitMQ.Client.3.6.0\lib\net45\RabbitMQ.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Raven.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\RavenDB.Client.3.5.35035-Unstable\lib\net45\Raven.Abstractions.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Raven.Abstractions">
+      <HintPath>..\..\packages\RavenDB.Client.3.5.35043-Unstable\lib\net45\Raven.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Raven.Client.Lightweight, Version=3.5.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\RavenDB.Client.3.5.35035-Unstable\lib\net45\Raven.Client.Lightweight.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\..\packages\RavenDB.Client.3.5.35043-Unstable\lib\net45\Raven.Client.Lightweight.dll</HintPath>
     </Reference>
     <Reference Include="ServiceControl.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\ServiceControl.Contracts.1.2.0\lib\net45\ServiceControl.Contracts.dll</HintPath>
@@ -240,6 +262,7 @@
     <Compile Include="Callback\Object\Usage.cs" />
     <Compile Include="Container\Containers_Autofac.cs" />
     <Compile Include="Container\Containers_CastleWindsor.cs" />
+    <Compile Include="Container\Containers_Ninject.cs" />
     <Compile Include="Container\Containers_Spring.cs" />
     <Compile Include="Container\Containers_StructureMap.cs" />
     <Compile Include="Container\Containers_Unity.cs" />
@@ -258,6 +281,8 @@
     <Compile Include="DataBus\Custom\Usage.cs" />
     <Compile Include="DataBus\DataBusProperty\MessageWithLargePayload.cs" />
     <Compile Include="DataBus\FileShare\Usage.cs" />
+    <Compile Include="DelayedDelivery\DeferForDateTime.cs" />
+    <Compile Include="DelayedDelivery\DeferForTimeSpan.cs" />
     <Compile Include="DiscardingOldMessages.cs" />
     <Compile Include="Encryption\Configuration\FromCode.cs" />
     <Compile Include="Encryption\Configuration\ProvideConfiguration.cs" />
@@ -287,6 +312,7 @@
     <Compile Include="Errors\ErrorQueue\ConfigurationSource\ConfigurationSource.cs" />
     <Compile Include="Errors\ErrorQueue\ConfigurationSource\Usage.cs" />
     <Compile Include="Extending\Features.cs" />
+    <Compile Include="Forwarding\Usage.cs" />
     <Compile Include="Gateway\Channels\ConfigurationSource\ConfigurationSource.cs" />
     <Compile Include="Gateway\Channels\ConfigurationSource\Usage.cs" />
     <Compile Include="Gateway\Channels\ProvideConfiguration.cs" />
@@ -338,12 +364,13 @@
     <Compile Include="Profiles\DependentProfile.cs" />
     <Compile Include="RavenDB\ChangeResourceManagerID.cs" />
     <Compile Include="RavenDB\Configure.cs" />
-    <Compile Include="RavenDB\ConfiguringTransactionRecoveryStorage.cs" />
     <Compile Include="Routing\RoutingAPIs.cs" />
     <Compile Include="Sagas\ConfigureSagaPersistence.cs" />
-    <Compile Include="Serialization\JsonSerialization.cs" />
-    <Compile Include="Serialization\XmlSerialization.cs" />
+    <Compile Include="Serialization\NewtonsoftSerializerUsage.cs" />
+    <Compile Include="Serialization\JsonSerializerUsage.cs" />
+    <Compile Include="Serialization\XmlSerializerUsage.cs" />
     <Compile Include="TransactionScopeUnitOfWork.cs" />
+    <Compile Include="Transports\Mqmq\SubscriptionAuthorization.cs" />
     <Compile Include="Transports\QueueCreation\ConcurrentQueueCreator.cs" />
     <Compile Include="Transports\QueueCreation\SequentialQueueCreator.cs" />
     <Compile Include="Transports\QueueCreation\QueueCreation.cs" />
@@ -353,6 +380,7 @@
     <Compile Include="HandlerOrdering.cs" />
     <Compile Include="Handlers\GenericAsyncHandler.cs" />
     <Compile Include="Transports\RabbitMQ_4\Usage.cs" />
+    <Compile Include="Transports\SqlServer\ConnectionStrings.cs" />
     <Compile Include="UpgradeGuides\5to6\EndpointStart.cs" />
     <Compile Include="UpgradeGuides\5to6\MyEvent.cs" />
     <Compile Include="Handlers\MyHandler.cs" />
@@ -449,7 +477,10 @@
     <Compile Include="Transports\SqlServer\ConfigurationSettings.cs" />
     <Compile Include="Transports\Throughput\ProvideConfiguration.cs" />
     <Compile Include="TransportTransactions.cs" />
+    <Compile Include="RavenDB\UpgradeGuides\3to4\HandlerWithRavenSession.cs" />
+    <Compile Include="RavenDB\UpgradeGuides\3to4\SharedSessionEndpointConfig.cs" />
     <Compile Include="UpgradeGuides\5to6\StartupInterface.cs" />
+    <Compile Include="UpgradeGuides\5to6\MsmqSubscriptionAuthorization.cs" />
     <Compile Include="UpgradeGuides\5to6\UpgradeMessageHandler.cs" />
     <Compile Include="UpgradeGuides\5to6\OutgoingBehavior.cs" />
     <Compile Include="UpgradeGuides\5to6\RawSend.cs" />
@@ -466,6 +497,8 @@
     <Content Include="Encryption\Configuration\encryption.config.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="RavenDB\SpecificDocumentStoreViaConnectionString.config.xml" />
+    <Content Include="Routing\EndpointMapping.config.xml" />
     <Content Include="Errors\ErrorQueue\ErrorQueue.config.xml" />
     <Content Include="Errors\FirstLevel\flr.config.xml" />
     <Content Include="Errors\retriesLogging.txt" />
@@ -527,9 +560,6 @@
     <Content Include="SCPluginsConfig\heartbeatsTtlConfig.xml" />
     <Content Include="Transports\Mqmq\MessageQueue.config.xml" />
     <Content Include="Transports\RabbitMQ_4\rabbitmqconnection.config.xml" />
-    <Content Include="Transports\Throughput\InitialThroughput.config.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="UpgradeGuides\5to6\null.xml" />
     <None Include="app.config" />
     <None Include="packages.config">
@@ -538,6 +568,9 @@
     <None Include="Routing\RoutingFile.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Transports\SqlServer\ConnectionStringsNamed.config" />
+    <None Include="Transports\SqlServer\ConnectionStrings.config" />
+    <None Include="UpgradeGuides\5to6\Channel.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

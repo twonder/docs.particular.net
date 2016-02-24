@@ -1,4 +1,4 @@
-﻿namespace Snippets5.Sagas
+﻿namespace Snippets6.Sagas
 {
     using NServiceBus;
     using NServiceBus.Persistence;
@@ -8,11 +8,11 @@
 
         public async void Simple()
         {
-            BusConfiguration busConfiguration = new BusConfiguration();
+            EndpointConfiguration configuration = new EndpointConfiguration();
 
             #region saga-configure
 
-            busConfiguration.UsePersistence<PersistenceToUseGoesHere>();
+            configuration.UsePersistence<PersistenceToUseGoesHere>();
 
             #endregion
         }

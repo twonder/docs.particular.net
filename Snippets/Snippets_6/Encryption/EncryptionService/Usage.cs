@@ -1,4 +1,4 @@
-﻿namespace Snippets5.Encryption.EncryptionService
+﻿namespace Snippets6.Encryption.EncryptionService
 {
     using NServiceBus;
 
@@ -8,9 +8,9 @@
         {
             #region EncryptionFromIEncryptionService
 
-            BusConfiguration busConfiguration = new BusConfiguration();
+            EndpointConfiguration configuration = new EndpointConfiguration();
             //where EncryptionService implements IEncryptionService 
-            busConfiguration.RegisterEncryptionService(() => new EncryptionService());
+            configuration.RegisterEncryptionService(() => new EncryptionService());
 
             #endregion
         }

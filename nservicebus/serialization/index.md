@@ -12,7 +12,8 @@ NServiceBus takes instances of .NET objects (messages, events and commands) and 
 
 - [XmlSerializer](xml.md)
 - [JsonSerializer/BsonSerializer](json.md)
-- [BinarySerializer](binary.md)
+- [NewtonsoftSerializer](newtonsoft.md)
+- [BinarySerializer](binary.md) (deprecated in Version 6)
 
 
 ### Using an existing serializer

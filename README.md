@@ -508,9 +508,6 @@ There are several keys each of which map to a different colored alert
 | `NOTE` or `INFO` | blue   |
 | `WARNING`        | yellow |
 | `DANGER`         | red    |
-| `BETA`           | yellow |
-
-`BETA` notes will also be prefixed with some text about it being a pre-release API.
 
 Keys can be used in two manners
 
@@ -560,9 +557,10 @@ Would be rendered as
 The first (and all top level) headers in a `.md` page should be a `h2` ie `##`. With sub-headers under it being `h2` are `h3` etc.
 
 
-## Space
+## Spaces
 
-* Add an empty after a heading
+* Two empty lines before a heading and any other text
+* Add an empty line after a heading
 * Add an empty line between paragraphs
 
 
@@ -609,7 +607,7 @@ With the minimal syntax being
 
     ![](/path/to/img.jpg "width=x")
 
-This will result in the image being resized with the following parameters
+This will result in the image being re-sized with the following parameters
 
     width="x" height="auto"
 
@@ -625,23 +623,36 @@ Sequence diagram images are generated using https://bramp.github.io/js-sequence-
 
  * Ticks are done with `&#10004;` &#10004;
  * Crosses are done with `&#10006;` &#10006;
- 
+
 
 ## More Information
 
  * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 
-# Language Preferences
+# Writing Style
+
+## Language Preferences
 
 For consistency, prefer American English.
+
+Avoid personal void. So no "we", "you", "your", "our" etc.
+
+
+## Version Language
+
+Avoid ambiguity.
+
+**Version X and above** and **Version Y and below** and **Version X to Version Y**.
+
+**Version X** and NOT **VX** or **version X**.
 
 
 # Additional Resources
 
-* [GitHub Flow in the Browser](https://help.github.com/articles/github-flow-in-the-browser/)
-* [General GitHub documentation](https://help.github.com/)
-* [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
-* [Forking a Repo](https://help.github.com/articles/fork-a-repo)
-* [Using Pull Requests](https://help.github.com/articles/using-pull-requests)
-* [Markdown Table generator](http://www.tablesgenerator.com/markdown_tables)
+ * [GitHub Flow in the Browser](https://help.github.com/articles/github-flow-in-the-browser/)
+ * [General GitHub documentation](https://help.github.com/)
+ * [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
+ * [Forking a Repo](https://help.github.com/articles/fork-a-repo)
+ * [Using Pull Requests](https://help.github.com/articles/using-pull-requests)
+ * [Markdown Table generator](http://www.tablesgenerator.com/markdown_tables)

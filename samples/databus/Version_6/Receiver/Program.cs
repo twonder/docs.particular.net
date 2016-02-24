@@ -4,8 +4,6 @@ using NServiceBus;
 
 class Program
 {
-    static string BasePath = "..\\..\\..\\storage";
-
     static void Main()
     {
         AsyncMain().GetAwaiter().GetResult();
@@ -13,14 +11,15 @@ class Program
 
     static async Task AsyncMain()
     {
-        BusConfiguration busConfiguration = new BusConfiguration();
-        busConfiguration.EndpointName("Samples.DataBus.Receiver");
-        busConfiguration.UseSerialization<JsonSerializer>();
-        busConfiguration.UseDataBus<FileShareDataBus>().BasePath(BasePath);
-        busConfiguration.UsePersistence<InMemoryPersistence>();
-        busConfiguration.EnableInstallers();
-        busConfiguration.SendFailedMessagesTo("error");
-        IEndpointInstance endpoint = await Endpoint.Start(busConfiguration);
+        EndpointConfiguration endpointConfiguration = new EndpointConfiguration();
+        endpointConfiguration.EndpointName("Samples.DataBus.Receiver");
+        endpointConfiguration.UseSerialization<JsonSerializer>();
+        endpointConfiguration.UseDataBus<FileShareDataBus>()
+            .BasePath("..\\..\\..\\storage");
+        endpointConfiguration.UsePersistence<InMemoryPersistence>();
+        endpointConfiguration.EnableInstallers();
+        endpointConfiguration.SendFailedMessagesTo("error");
+        IEndpointInstance endpoint = await Endpoint.Start(endpointConfiguration);
         try
         {
             Console.WriteLine("Press any key to exit");

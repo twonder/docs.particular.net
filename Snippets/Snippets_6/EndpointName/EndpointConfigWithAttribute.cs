@@ -1,4 +1,4 @@
-﻿namespace Snippets5.EndpointName
+﻿namespace Snippets6.EndpointName
 {
     using NServiceBus;
 
@@ -8,7 +8,7 @@
     {
         // ... your custom config
         // endcode
-        public void Customize(BusConfiguration busConfiguration)
+        public void Customize(EndpointConfiguration configuration)
         {
         }
     }

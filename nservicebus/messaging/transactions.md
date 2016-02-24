@@ -25,7 +25,7 @@ Based on transaction handling mode, NServiceBus offers three levels of guarantee
 
 ### Transaction scope (Distributed transaction)
 
-In this mode the transport receive operation is wrapped in a [`TransactionScope`](http://msdn.microsoft.com/en-us/library/system.transactions.transactionscope). Other operations inside this scope, both sending messages and manipulating data, are guaranteed to be executed (eventually) as a whole or rolled back as a whole.
+In this mode the transport receive operation is wrapped in a [`TransactionScope`](https://msdn.microsoft.com/en-us/library/system.transactions.transactionscope). Other operations inside this scope, both sending messages and manipulating data, are guaranteed to be executed (eventually) as a whole or rolled back as a whole.
 
 Depending on transport the transaction is escalated to a distributed one (following two-phase commit protocol) when required. For example, this is not required when using SQL Server transport with NHibernate persistence both targeted at the same database. In this case the ADO.NET driver guarantees that everything happens inside a single database transaction, ACID guarantees are held for the whole processing.
 
@@ -86,13 +86,19 @@ This mode has the same consistency guarantees as the *Receive Only* mode mention
 
 ### Unreliable (Transactions Disabled)
 
-In this mode the transport doesn't wrap the receive operation in any kind of transaction. Should the message fail to process it will be moved straight to the error queue. There will be no first level or second level retries since those features rely on transport level transactions.
-
-WARNING: If there is a critical failure, including system or endpoint crash, the message is **permanently lost** since it's received with no transaction.
-
-NOTE: In Version 5 and below, when transactions are disabled, no retries will be performed and messages **will not be forwarded** to the error queue in the event of any failure.
+DANGER: In this mode, when encountering a critical failure such as system or endpoint crash, the message is **permanently lost**.
 
 snippet:TransactionsDisable
+
+
+#### Versions 6 and above
+
+In this mode the transport doesn't wrap the receive operation in any kind of transaction. Should the message fail to process it will be moved straight to the error queue.
+
+
+#### Versions 5 and below
+
+In Versions 5 and below, when transactions are disabled, no retries will be performed and messages **will not be forwarded** to the error queue in the event of any failure and the message will be permanently lost.
 
 
 ## Outbox
@@ -122,6 +128,7 @@ WARNING: This API must not be used in combination with transports running in *tr
 The following options for transaction scopes used during message processing can be configured.
 
 NOTE: Starting from version 6 isolation level and timeout for transaction scopes are also configured at the transport level.
+
 
 ### Isolation level
 

@@ -1,21 +1,17 @@
 ﻿namespace Snippets6.Transports.Throughput
 {
-    using NServiceBus.Config;
-    using NServiceBus.Config.ConfigurationSource;
+    using NServiceBus;
 
-    #region TuningFromCode
-
-    public class ProvideConfiguration :
-        IProvideConfiguration<TransportConfig>
+    class ConcurrencyConfiguration
     {
-        public TransportConfig GetConfiguration()
+        void ConfigureFromCode()
         {
-            return new TransportConfig
-            {
-                MaximumConcurrencyLevel = 5
-            };
-        }
-    }
+            #region TuningFromCode
+            EndpointConfiguration configuration = new EndpointConfiguration();
 
-    #endregion
+            configuration.LimitMessageProcessingConcurrencyTo(5);
+            #endregion
+        }
+        
+    }
 }

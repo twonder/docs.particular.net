@@ -1,4 +1,4 @@
-﻿namespace Snippets5.Encryption.Conventions
+﻿namespace Snippets6.Encryption.Conventions
 {
     using NServiceBus;
 
@@ -7,8 +7,8 @@
         public Usage()
         {
             #region DefiningEncryptedPropertiesAs
-            BusConfiguration busConfiguration = new BusConfiguration();
-            ConventionsBuilder conventions = busConfiguration.Conventions();
+            EndpointConfiguration configuration = new EndpointConfiguration();
+            ConventionsBuilder conventions = configuration.Conventions();
             conventions.DefiningEncryptedPropertiesAs(info => info.Name.EndsWith("EncryptedProperty"));
             #endregion
         }

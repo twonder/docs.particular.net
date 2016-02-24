@@ -4,7 +4,6 @@ using NServiceBus;
 
 class Program
 {
-    static string BasePath = "..\\..\\..\\storage";
 
     static void Main()
     {
@@ -13,14 +12,21 @@ class Program
 
     static async Task AsyncMain()
     {
-        BusConfiguration busConfiguration = new BusConfiguration();
-        busConfiguration.EndpointName("Samples.DataBus.Sender");
-        busConfiguration.UseSerialization<JsonSerializer>();
-        busConfiguration.UseDataBus<FileShareDataBus>().BasePath(BasePath);
-        busConfiguration.UsePersistence<InMemoryPersistence>();
-        busConfiguration.EnableInstallers();
-        busConfiguration.SendFailedMessagesTo("error");
-        IEndpointInstance endpoint = await Endpoint.Start(busConfiguration);
+        EndpointConfiguration endpointConfiguration = new EndpointConfiguration();
+        endpointConfiguration.EndpointName("Samples.DataBus.Sender");
+        endpointConfiguration.UseSerialization<JsonSerializer>();
+
+        #region ConfigureDataBus
+
+        endpointConfiguration.UseDataBus<FileShareDataBus>()
+            .BasePath("..\\..\\..\\storage");
+
+        #endregion
+
+        endpointConfiguration.UsePersistence<InMemoryPersistence>();
+        endpointConfiguration.EnableInstallers();
+        endpointConfiguration.SendFailedMessagesTo("error");
+        IEndpointInstance endpoint = await Endpoint.Start(endpointConfiguration);
         try
         {
             Console.WriteLine("Press 'D' to send a databus large message");
@@ -53,7 +59,7 @@ class Program
     }
 
 
-    static async Task SendMessageLargePayload(IBusSession busSession)
+    static async Task SendMessageLargePayload(IEndpointInstance endpointInstance)
     {
         #region SendMessageLargePayload
 
@@ -62,14 +68,14 @@ class Program
             SomeProperty = "This message contains a large blob that will be sent on the data bus",
             LargeBlob = new DataBusProperty<byte[]>(new byte[1024*1024*5]) //5MB
         };
-        await busSession.Send("Samples.DataBus.Receiver", message);
+        await endpointInstance.Send("Samples.DataBus.Receiver", message);
 
         #endregion
 
-        Console.WriteLine("Message sent, the payload is stored in: " + BasePath);
+        Console.WriteLine("Message sent, the payload is stored in: ..\\..\\..\\storage");
     }
 
-    static async Task SendMessageTooLargePayload(IBusSession busSession)
+    static async Task SendMessageTooLargePayload(IEndpointInstance endpointInstance)
     {
         #region SendMessageTooLargePayload
 
@@ -77,7 +83,7 @@ class Program
         {
             LargeBlob = new byte[1024*1024*5] //5MB
         };
-        await busSession.Send("Samples.DataBus.Receiver", message);
+        await endpointInstance.Send("Samples.DataBus.Receiver", message);
 
         #endregion
     }

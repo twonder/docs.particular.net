@@ -18,6 +18,7 @@
       Url: "nservicebus/messaging"
       Articles:
         - "nservicebus/messaging/messages-events-commands"
+        - "nservicebus/messaging/conventions"
         - "nservicebus/messaging/databus"
         - "nservicebus/messaging/custom-databus"
         - "nservicebus/messaging/discard-old-messages"
@@ -29,6 +30,7 @@
         - "nservicebus/messaging/messages-as-interfaces"
         - "nservicebus/messaging/reply-to-a-message"
         - "nservicebus/messaging/send-a-message"
+        - "nservicebus/messaging/forwarding"
         - "nservicebus/messaging/batched-dispatch"
         - "nservicebus/messaging/specify-input-queue-name"
         - "nservicebus/messaging/routing"
@@ -36,6 +38,7 @@
         - "nservicebus/messaging/unobtrusive-mode"
         - "nservicebus/messaging/best-practice-enforcement"
         - "nservicebus/scheduling"
+        - "nservicebus/messaging/delayed-delivery"
         - Title: "Publish Subscribe"
           Url: "nservicebus/messaging/publish-subscribe"
           Articles:
@@ -96,9 +99,8 @@
         - Title: "Sql Server"
           Url: "nservicebus/sqlserver"
           Articles:
-            - "nservicebus/sqlserver/usage"
+            - "nservicebus/sqlserver/configuration"
             - "nservicebus/sqlserver/design"
-            - "nservicebus/sqlserver/concurrency"
             - "nservicebus/sqlserver/multiple-databases"
             - "nservicebus/sqlserver/operations-scripting"
         - Title: "MSMQ"
@@ -108,6 +110,7 @@
             - "nservicebus/msmq/viewing-message-content-in-msmq"
             - "nservicebus/msmq/transportconfig"
             - "nservicebus/msmq/troubleshooting"
+            - "nservicebus/msmq/subscription-authorisation"
             - "nservicebus/msmq/network-load-balancing"
             - "nservicebus/msmq/operations-scripting"
             - "nservicebus/msmq/uninstalling-msmq"
@@ -123,13 +126,14 @@
         - Title: "Extending"
           Url: "nservicebus/transports"
           Articles:
-            - "nservicebus/transports/queuecreation"          
+            - "nservicebus/transports/queuecreation"
     -
       Title: "Serialization"
       Url: "nservicebus/serialization"
       Articles:
         - "nservicebus/serialization/xml"
         - "nservicebus/serialization/json"
+        - "nservicebus/serialization/newtonsoft"
         - "nservicebus/serialization/binary"
         - "nservicebus/serialization/custom-serializer"
         - "nservicebus/serialization/type-was-not-registered"
@@ -236,6 +240,7 @@
       Title: "Scalability and HA"
       Url: "nservicebus/scalability-and-ha"
       Articles:
+        - "nservicebus/scalability-and-ha/scale-out"
         - "nservicebus/scalability-and-ha/deploying-to-a-windows-failover-cluster"
         - "nservicebus/scalability-and-ha/individualizing-queues-when-scaling-out"
         - Title: "Distributor"

@@ -19,9 +19,10 @@ Over time the version of ILMerged Json.NET has changed.
 
 | NServiceBus Version | Json.net Version |
 |---|---|
-| 3  | 4.0.8 |
+| 3.X  | 4.0.8 |
 | 4.0 | 4.5.11 |
 | 4.1-5.X | 5.0.6 |
+| 6.0-6.X | 8.0.2 |
 
 
 ## Customization
@@ -65,6 +66,8 @@ The result will be
 
 
 ## Bson
+
+WARNING: In Version 6 of NServiceBus the built in BSON serializer has been deprecated. The [Newtonsoft serializer](/nservicebus/serialization/newtonsoft.md) can be used as a replacement
 
 Using [Bson](https://en.wikipedia.org/wiki/BSON) via the same ILMerged copy of Json.NET as above.
 

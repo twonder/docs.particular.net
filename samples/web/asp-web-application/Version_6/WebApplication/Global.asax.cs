@@ -16,13 +16,15 @@ public class Global : HttpApplication
     {
         #region ApplicationStart
 
-        BusConfiguration busConfiguration = new BusConfiguration();
-        busConfiguration.EndpointName("Samples.AsyncPages.WebApplication");
-        busConfiguration.UseSerialization<JsonSerializer>();
-        busConfiguration.EnableInstallers();
-        busConfiguration.UsePersistence<InMemoryPersistence>();
+        EndpointConfiguration endpointConfiguration = new EndpointConfiguration();
+        endpointConfiguration.EndpointName("Samples.AsyncPages.WebApplication");
+        endpointConfiguration.ScaleOut()
+            .InstanceDiscriminator("1");
+        endpointConfiguration.UseSerialization<JsonSerializer>();
+        endpointConfiguration.EnableInstallers();
+        endpointConfiguration.UsePersistence<InMemoryPersistence>();
 
-        Endpoint = NServiceBus.Endpoint.Start(busConfiguration).GetAwaiter().GetResult();
+        Endpoint = NServiceBus.Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
 
         #endregion
     }

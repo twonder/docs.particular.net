@@ -173,7 +173,6 @@
     <Content Include="SCPluginsConfig\heartbeatsIntervalConfig.xml" />
     <Content Include="SCPluginsConfig\heartbeatsTtlConfig.xml" />
     <Content Include="UpgradeGuides\3to4\MsmqTransportConfig.config.xml" />
-    <None Include="app.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -211,6 +210,8 @@
     <Compile Include="Container\Custom\Usage.cs" />
     <Compile Include="Container\MyService.cs" />
     <Compile Include="CustomChecks.cs" />
+    <Compile Include="DelayedDelivery\DeferForDateTime.cs" />
+    <Compile Include="DelayedDelivery\DeferForTimeSpan.cs" />
     <Compile Include="Errors\SecondLevel\CustomPolicies\ErrorsHeadersHelper.cs" />
     <Compile Include="Errors\SecondLevel\CustomPolicies\ExceptionPolicy.cs" />
     <Compile Include="Handlers\GenericHandler.cs" />
@@ -328,11 +329,12 @@
     <Compile Include="Scheduling\Scheduling.cs" />
     <Compile Include="Errors\SecondLevel\CustomPolicies\SimplePolicy.cs" />
     <Compile Include="Hosting.cs" />
-    <Compile Include="Serialization\BinarySerialization.cs" />
-    <Compile Include="Serialization\BsonSerialization.cs" />
-    <Compile Include="Serialization\JsonSerialization.cs" />
-    <Compile Include="Serialization\XmlSerialization.cs" />
+    <Compile Include="Serialization\BinarySerializerUsage.cs" />
+    <Compile Include="Serialization\BsonSerializerUsage.cs" />
+    <Compile Include="Serialization\JsonSerializerUsage.cs" />
+    <Compile Include="Serialization\XmlSerializerUsage.cs" />
     <Compile Include="Transactions.cs" />
+    <Compile Include="Transports\Msmq\AuthorizeSubscriptions.cs" />
     <Compile Include="Transports\Throughput\ProvideConfiguration.cs" />
     <Compile Include="UnitTesting\Unobtrusive.cs" />
     <Compile Include="UpgradeGuides\3to4\SimpleSaga\CompleteOrder.cs" />
